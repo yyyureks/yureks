@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yureks Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="store-page">
+
+    <h1 class="store-title">SHOP</h1>
+
+    <div class="beat-card" id="beatCard">
+
+        <div class="beat-main">
+
+            <div class="beat-info">
+                <h2>EUGHHH</h2>
+                <p>154 BPM — PROD. XPREE & YUREKS</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back">BACK</a>
+
+    <script>
+
+        const audio = new Audio(
+            "music/eughhh 154 bpm prod xpree & yureks.mp3"
+        );
+
+        const beatCard = document.getElementById("beatCard");
+
+        beatCard.addEventListener("click", function() {
+
+            if (audio.paused) {
+
+                audio.play();
+                beatCard.classList.add("playing");
+
+            } else {
+
+                audio.pause();
+                beatCard.classList.remove("playing");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
